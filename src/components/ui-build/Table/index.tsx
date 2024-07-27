@@ -43,8 +43,12 @@ export default async function TableDemo({ page, limit }: Props) {
           <TableRow key={id} className="hover:bg-[#ffeace]/50">
             <TableCell className="font-medium">{id}</TableCell>
             <TableCell>{userId}</TableCell>
-            <TableCell>{title}</TableCell>
-            <TableCell>{body}</TableCell>
+            <TableCell>
+              <span className="line-clamp-1">{title}</span>
+            </TableCell>
+            <TableCell>
+              <span className="line-clamp-1">{body}</span>
+            </TableCell>
           </TableRow>
         ))}
       </TableBody>
