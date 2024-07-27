@@ -1,11 +1,16 @@
 import { Pagination, Table } from "@/components";
 
-const PostsSection = () => {
+interface Props {
+  page: number;
+  limit: number;
+}
+
+const PostsSection = ({ page, limit }: Props) => {
   return (
-    <section className="full-width content-grid bg-white pb-12 pt-20">
+    <section className=" bg-white pb-12 pt-20">
       <div className="space-y-8">
-        <h2 className="ml-4 text-4xl font-light">Posts</h2>
-        <Table />
+        <h2 className="text-4xl font-light">Posts</h2>
+        <Table page={page} limit={limit} />
         <Pagination />
       </div>
     </section>

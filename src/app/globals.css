@@ -4,6 +4,7 @@
 
 @layer base {
   :root {
+    --custom: 34, 100%, 52%;
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;
@@ -65,6 +66,11 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+
+  ::selection {
+    color: hsl(var(--primary));
+    background: hsl(var(--custom));
   }
 
   .content-grid {
