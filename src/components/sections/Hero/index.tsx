@@ -1,4 +1,4 @@
-import { Button, Masonary } from "@/components";
+import { Masonary } from "@/components";
 
 const HeroSection = () => {
   return (

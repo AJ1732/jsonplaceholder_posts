@@ -8,4 +8,4 @@ export { default as Button } from "./ui-build/Button";
 export { default as Pagination } from "./ui-build/Pagination";
 
 // EXTRA COMPONENTS
-export { default as Masonary } from "./Masonary";
+export { default as Masonary } from "./ui-build/Masonary";
