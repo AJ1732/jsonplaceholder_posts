@@ -21,7 +21,7 @@ export const getPosts = async (
 
 export const getSinglePost = async (id: number): Promise<PostsProps> => {
   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
-    cache: "no-store",
+    // cache: "no-store",
   });
 
   if (!res.ok) {
@@ -39,7 +39,7 @@ interface SingleUserProps {
 
 export const getSingleUser = async (id: number): Promise<SingleUserProps> => {
   const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`, {
-    cache: "no-store",
+    // cache: "no-store",
   });
 
   if (!res.ok) {

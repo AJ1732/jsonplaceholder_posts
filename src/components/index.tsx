@@ -7,6 +7,8 @@ export { default as Table } from "./ui-build/Table";
 export { default as Button } from "./ui-build/Button";
 export { default as Card } from "./ui-build/Card";
 export { default as Pagination } from "./ui-build/Pagination";
+// export { default as Skeleton } from "./ui-build/Skeleton";
+export { Skeleton } from "@/components/ui/skeleton";
 
 // EXTRA COMPONENTS
 export { default as Masonary } from "./ui-build/Masonary";

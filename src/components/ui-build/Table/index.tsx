@@ -10,7 +10,6 @@ import {
 
 import Link from "next/link";
 import { getPosts } from "@/func/getData";
-import { Suspense } from "react";
 
 type Post = {
   userId: number;
@@ -24,8 +23,9 @@ interface Props {
   limit: number;
 }
 
+// { page, limit }: Props
 export default async function TableDemo({ page, limit }: Props) {
-  const posts: Post[] = await getPosts(page, limit);
+  const posts: Post[] = await getPosts(Number(page), Number(limit));
 
   return (
     <Table>
@@ -41,20 +41,13 @@ export default async function TableDemo({ page, limit }: Props) {
         </TableRow>
       </TableHeader>
 
-      <Suspense
-        key={page}
-        // fallback={
-        //   <div className="flex h-80 w-full items-center justify-center bg-red-500">
-        //     Loading
-        //   </div>
-        // }
-      >
+      
         <TableBody>
           {posts.map(({ id, userId, title, body }) => (
-            <Link key={id} href={`/posts/${id}`} legacyBehavior={true}>
+            <Link key={id} href={`/posts/${id}`} legacyBehavior={true} scroll>
               <TableRow
                 key={id}
-                className="cursor-pointer hover:bg-[#ffeace]/50 [&:nth-child(3)]:[&_td]:p-0"
+                className="cursor-pointer hover:bg-[#ffeace]/50"
               >
                 <TableCell className="font-medium">{id}</TableCell>
                 <TableCell>{userId}</TableCell>
@@ -68,7 +61,6 @@ export default async function TableDemo({ page, limit }: Props) {
             </Link>
           ))}
         </TableBody>
-      </Suspense>
     </Table>
   );
 }
