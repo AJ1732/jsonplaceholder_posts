@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <header
       className={`content-grid fixed z-50 w-full transition-all duration-300 ${navColor ? "bg-white" : "bg-transparent"} ${
-        navScroll ? "-translate-y-28 opacity-0" : "translate-x-0 opacity-100"
+        navScroll ? "-translate-y-28 opacity-0" : "translate-x-0 drop-shadow-md opacity-100"
       } `}
     >
       <div className="full-width content-grid py-5 lg:pt-7">
@@ -53,7 +53,7 @@ const Navbar = () => {
           ></div>
 
           {/* MOBILE NAV */}
-          <nav className="z-10 h-fit rounded-md bg-neutral-300 px-4 py-8">
+          <nav className="z-10 mt-10 h-fit rounded-md bg-neutral-300 px-4 py-8">
             <ul className="flex flex-col items-start justify-between text-right *:px-6 *:py-3">
               {navlinks.map(({ title, link }) => (
                 <li
