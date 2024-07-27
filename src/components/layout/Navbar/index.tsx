@@ -5,6 +5,7 @@ import { useState } from "react";
 
 const Navbar = () => {
   const [openNav, setOpenNav] = useState(false);
+  const navlinks = ["Home", "Posts"];
 
   return (
     <header className="content-grid fixed z-50 w-full bg-white/5 backdrop-blur-lg">
@@ -15,7 +16,7 @@ const Navbar = () => {
           </h1>
 
           <ul className="flex items-center justify-between gap-4 *:px-2 max-md:hidden">
-            {["Home", "Posts"].map((link) => (
+            {navlinks.map((link) => (
               <li key={link}>{link}</li>
             ))}
           </ul>
@@ -34,7 +35,7 @@ const Navbar = () => {
         >
           <div className="h-fit rounded-md bg-neutral-300 px-4 py-8">
             <ul className="flex flex-col items-start justify-between gap-4 text-right *:px-2">
-              {["Home", "Posts"].map((link) => (
+              {navlinks.map((link) => (
                 <li key={link} className="text-xl font-light text-black">
                   {link}
                 </li>
