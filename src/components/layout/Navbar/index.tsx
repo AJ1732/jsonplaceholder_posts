@@ -1,14 +1,21 @@
 "use client";
+import { useState } from "react";
 import { Button } from "@/components";
 import { MenuIcon } from "@/components/svgs";
-import { useState } from "react";
+import { useNavScrollAnimation } from "@/hooks";
 
 const Navbar = () => {
-  const [openNav, setOpenNav] = useState(false);
   const navlinks = ["Home", "Posts"];
 
+  const [openNav, setOpenNav] = useState(false);
+  const [navColor, navScroll] = useNavScrollAnimation();
+
   return (
-    <header className="content-grid fixed z-50 w-full bg-white">
+    <header
+      className={`content-grid fixed z-50 w-full transition-all duration-300 ${navColor ? "bg-white" : "bg-transparent"} ${
+        navScroll ? "-translate-y-28 opacity-0" : "translate-x-0 opacity-100"
+      } `}
+    >
       <div className="full-width content-grid py-5 lg:pt-7">
         <nav className="flex size-full items-center justify-between">
           <h1 className="text-[clamp(1.5rem,_4vw,_2.25rem)] font-light">...</h1>
