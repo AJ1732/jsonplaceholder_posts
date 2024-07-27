@@ -27,10 +27,16 @@ const CardDemo = ({
   return (
     <Card className={className}>
       <CardHeader>
-        <CardTitle className="max-w-96">{title}</CardTitle>
+        <CardTitle className="max-w-96 first-letter:capitalize">
+          {title}
+        </CardTitle>
       </CardHeader>
       <CardContent>
-        {typeof content === "string" ? <p>{content}</p> : content}
+        {typeof content === "string" ? (
+          <p className="first-letter:capitalize">{content}</p>
+        ) : (
+          content
+        )}
       </CardContent>
       <CardFooter>
         <CardDescription>

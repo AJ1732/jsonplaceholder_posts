@@ -22,7 +22,9 @@ const SinglePost = async ({ params }: Props) => {
     <section className="my-10 flex items-center justify-center">
       <div className="flex items-center justify-between gap-10 max-lg:flex-col">
         <div className="relative flex h-[22.875rem] w-96 items-center justify-center overflow-hidden rounded-lg">
-          <p className={`z-10 pt-4 text-[240px] ${contrail_one.className}`}>
+          <p
+            className={`z-10 pt-4 text-[240px] ${contrail_one.className}`}
+          >
             {id}
           </p>
           <PostBg className={`absolute`} />
