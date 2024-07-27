@@ -12,6 +12,7 @@ type Props = {
 };
 
 const SinglePost = async ({ params }: Props) => {
+  await new Promise((resolve) => setTimeout(resolve, 500));
   const post = await getSinglePost(params.id);
 
   const { userId, id, title, body } = post;

@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { Pagination, Table } from "@/components";
+import { Pagination, Table, TableLoading } from "@/components";
 
 interface Props {
   page: number;
@@ -12,16 +12,10 @@ const PostsSection = ({ page, limit }: Props) => {
       <div className="space-y-8">
         <h2 className="text-4xl font-light">Posts</h2>
 
-        <Suspense
-          key={page}
-          fallback={
-            <div className="flex h-80 w-full items-center justify-center bg-red-500">
-              Loading
-            </div>
-          }
-        >
+        <Suspense key={page} fallback={<TableLoading rowLimit={limit} />}>
           <Table page={page} limit={limit} />
         </Suspense>
+
         <Pagination cPage={page} cLimit={limit} />
       </div>
     </section>

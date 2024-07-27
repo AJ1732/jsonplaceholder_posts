@@ -1,4 +1,6 @@
+import { HomeLoading } from "@/components";
+
 const Loading = () => {
-  return <div>Loading</div>;
+  return <HomeLoading />;
 };
 export default Loading;

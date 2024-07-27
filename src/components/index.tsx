@@ -12,3 +12,8 @@ export { Skeleton } from "@/components/ui/skeleton";
 
 // EXTRA COMPONENTS
 export { default as Masonary } from "./ui-build/Masonary";
+
+// LOADING UI COMPONENTS
+export { default as HomeLoading } from "./loading/Home";
+export { default as CardLoading } from "./loading/Card";
+export { default as TableLoading } from "./loading/Table";
