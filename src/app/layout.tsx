@@ -25,7 +25,7 @@ export default function RootLayout({
         className={cn("bg-background font-sans antialiased", fontSans.variable)}
       >
         <Navbar />
-        <main className="full-width content-grid min-h-dvh">{children}</main>
+        <main className="full-width content-grid pt-20 min-h-dvh">{children}</main>
         <Footer />
       </body>
     </html>
