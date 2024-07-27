@@ -6,3 +6,6 @@ export { default as Footer } from "./layout/Footer";
 export { default as Table } from "./ui-build/Table";
 export { default as Button } from "./ui-build/Button";
 export { default as Pagination } from "./ui-build/Pagination";
+
+// EXTRA COMPONENTS
+export { default as Masonary } from "./Masonary";
