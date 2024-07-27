@@ -9,13 +9,18 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination";
 import { useSearchParams, usePathname } from "next/navigation";
+interface Props {
+  cPage: number;
+  cLimit: number;
+}
 
-export default function PaginationDemo() {
+export default function PaginationDemo({cPage, cLimit}: Props) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   
-  const page = searchParams.get("page") ?? "1";
-  const limit = searchParams.get("limit") ?? "5";
+  const page = searchParams.get("page") ?? cPage;
+  const limit = searchParams.get("limit") ?? cLimit;
+
   
   return (
     <Pagination>

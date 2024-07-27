@@ -22,7 +22,7 @@ const PostsSection = ({ page, limit }: Props) => {
         >
           <Table page={page} limit={limit} />
         </Suspense>
-        <Pagination />
+        <Pagination cPage={page} cLimit={limit} />
       </div>
     </section>
   );
