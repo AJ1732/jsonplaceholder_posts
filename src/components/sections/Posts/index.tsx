@@ -7,7 +7,7 @@ interface Props {
 
 const PostsSection = ({ page, limit }: Props) => {
   return (
-    <section id="posts" className=" bg-white pb-12 pt-20">
+    <section id="posts" className="bg-white pb-12 pt-20">
       <div className="space-y-8">
         <h2 className="text-4xl font-light">Posts</h2>
         <Table page={page} limit={limit} />
