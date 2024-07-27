@@ -1,6 +1,8 @@
+import { Button} from "@/components";
+
 const HeroSection = () => {
   return (
-    <section>
+    <section className="min-h-96">
       <div>HeroSection</div>
     </section>
   );
