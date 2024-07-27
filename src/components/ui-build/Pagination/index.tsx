@@ -22,14 +22,14 @@ export default function PaginationDemo() {
       <PaginationContent>
         <PaginationItem>
           <PaginationPrevious
-            href={`${pathname}?page=${Number(page) - 1}&limit=${limit}`}
+            href={`${pathname}?page=${Number(page) - 1}&limit=${limit}#posts`}
           />
         </PaginationItem>
 
         {[1, 2, 3].map((item) => (
           <PaginationItem>
             <PaginationLink
-              href={`${pathname}?page=${item}&limit=${limit}`}
+              href={`${pathname}?page=${item}&limit=${limit}#posts`}
               isActive={Number(page) === item}
             >
               {item}
