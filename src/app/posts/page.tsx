@@ -5,8 +5,6 @@ interface Props {
 }
 
 const PostsPage = async ({ searchParams }: Props) => {
-  await new Promise((resolve) => setTimeout(resolve, 500));
-
   const { page = 1, limit = 10 } = searchParams;
 
   return (
