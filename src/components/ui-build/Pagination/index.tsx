@@ -15,15 +15,15 @@ interface Props {
   cLimit: number;
 }
 
-export default function PaginationDemo({cPage, cLimit}: Props) {
+export default function PaginationDemo({ cPage, cLimit }: Props) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  
+
   const page = searchParams.get("page") ?? cPage;
   const limit = searchParams.get("limit") ?? cLimit;
 
-  const pages = useArrayGen(3)
-  
+  const pages = useArrayGen(3);
+
   return (
     <Pagination>
       <PaginationContent>

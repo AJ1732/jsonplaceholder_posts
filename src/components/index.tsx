@@ -11,6 +11,7 @@ export { Skeleton } from "@/components/ui/skeleton";
 
 // EXTRA COMPONENTS
 export { default as Masonary } from "./ui-build/Masonary";
+export { default as ErrorPage } from "./ui-build/ErrorPage";
 
 // LOADING UI COMPONENTS
 export { default as PageLoader } from "./loading/PageLoader";

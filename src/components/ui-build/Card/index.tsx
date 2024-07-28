@@ -13,7 +13,7 @@ interface Props {
   content: string | React.ReactNode;
   footer?: string | React.ReactNode;
   className?: string;
-  user: string;
+  user?: string;
 }
 
 const CardDemo = ({
