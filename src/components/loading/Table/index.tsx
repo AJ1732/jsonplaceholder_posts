@@ -16,7 +16,7 @@ const TableLoading = ({ rowLimit }: { rowLimit: number }) => {
 
   return (
     <Table>
-      <TableCaption>
+      <TableCaption className="pb-4">
         A list of <span className="italic">JSON placeholder</span> posts.
       </TableCaption>
       <TableHeader>
