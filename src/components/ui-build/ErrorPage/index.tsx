@@ -3,6 +3,7 @@ import { useRouter } from "next/navigation";
 import { Button } from "@/components";
 import { ErrorFig } from "@/components/svgs";
 import { Contrail_One } from "next/font/google";
+import Link from "next/link";
 
 const contrail_one = Contrail_One({ weight: ["400"], subsets: ["latin"] });
 
@@ -18,12 +19,14 @@ const ErrorPage = ({ message }: { message: string }) => {
           Oops!
         </h3>
         <p className="text-lg lg:text-xl">
-          Something went wrong, <br /> 
+          Something went wrong, <br />
           {message} <br /> <br />
         </p>
-        <Button className="py-6 text-lg" onClick={() => router.push(`/`)}>
-          Go Home
-        </Button>
+        <Link href="/">
+          <Button className="py-6 text-lg" onClick={() => router.push(`/`)}>
+            Go Home
+          </Button>
+        </Link>
       </div>
 
       <ErrorFig className="h-fit max-w-60" />
