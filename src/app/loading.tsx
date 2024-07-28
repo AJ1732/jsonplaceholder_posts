@@ -1,6 +1,6 @@
-import { HomeLoading } from "@/components";
+import { PageLoader } from "@/components";
 
 const Loading = () => {
-  return <HomeLoading />;
+  return <PageLoader />;
 };
 export default Loading;

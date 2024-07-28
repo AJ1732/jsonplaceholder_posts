@@ -72,10 +72,25 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        'beads': {
+          '0%, 100%': { 
+            transform: 'scale(0.2)',  
+            backgroundColor: "#FFD49C",
+          },
+          '40%': { 
+            transform: 'scale(1)',
+            backgroundColor: '#FF9408',
+          },
+          '50%': { 
+            transform: 'scale(1)',
+            backgroundColor: '#CC7606',
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        'bead': 'beads 1.5s ease-in-out infinite',
       },
     },
   },

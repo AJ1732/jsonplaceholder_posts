@@ -1,6 +1,6 @@
 import { PageLoader } from "@/components";
 
-const LoadingPosts = () => {
+const LoadingPage = () => {
   return <PageLoader />;
 };
-export default LoadingPosts;
+export default LoadingPage;

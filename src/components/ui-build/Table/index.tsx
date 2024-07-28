@@ -33,7 +33,7 @@ export default async function TableDemo({ page, limit }: Props) {
         A list of <span className="italic">JSON placeholder</span> posts.
       </TableCaption>
       <TableHeader>
-        <TableRow className="uppercase">
+        <TableRow>
           <TableHead className="w-[100px]">S/N</TableHead>
           <TableHead className="w-[100px]">User Id</TableHead>
           <TableHead>Title</TableHead>
@@ -46,12 +46,14 @@ export default async function TableDemo({ page, limit }: Props) {
           <Link key={id} href={`/posts/${id}`} legacyBehavior={true} scroll>
             <TableRow key={id} className="cursor-pointer hover:bg-[#ffeace]/50">
               <TableCell className="font-medium">{id}</TableCell>
-              <TableCell>{userId}</TableCell>
               <TableCell>
-                <span className="line-clamp-1">{title}</span>
+                <span className="block min-w-12">{userId}</span>
               </TableCell>
               <TableCell>
-                <span className="line-clamp-1">{body}</span>
+                <span className="line-clamp-1 min-w-[150px]">{title}</span>
+              </TableCell>
+              <TableCell>
+                <span className="line-clamp-1 min-w-[150px]">{body}</span>
               </TableCell>
             </TableRow>
           </Link>

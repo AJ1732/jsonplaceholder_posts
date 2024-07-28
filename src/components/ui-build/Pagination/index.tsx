@@ -8,6 +8,7 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
+import { useArrayGen } from "@/hooks";
 import { useSearchParams, usePathname } from "next/navigation";
 interface Props {
   cPage: number;
@@ -21,6 +22,7 @@ export default function PaginationDemo({cPage, cLimit}: Props) {
   const page = searchParams.get("page") ?? cPage;
   const limit = searchParams.get("limit") ?? cLimit;
 
+  const pages = useArrayGen(3)
   
   return (
     <Pagination>
@@ -31,8 +33,8 @@ export default function PaginationDemo({cPage, cLimit}: Props) {
           />
         </PaginationItem>
 
-        {[1, 2, 3].map((item) => (
-          <PaginationItem>
+        {pages.map((item) => (
+          <PaginationItem key={item}>
             <PaginationLink
               href={`${pathname}?page=${item}&limit=${limit}#posts`}
               isActive={Number(page) === item}

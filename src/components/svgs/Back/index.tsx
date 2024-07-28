@@ -6,8 +6,11 @@ const BackIcon = () => {
   const router = useRouter();
 
   return (
-    <div>
-      <ChevronLeft onClick={() => router.back()} className="lg:size-10 -ml-3" />
+    <div
+      onClick={() => router.back()}
+      className="flex items-center justify-start cursor-pointer"
+    >
+      <ChevronLeft className="-ml-3 lg:size-8" /> Back
     </div>
   );
 };
