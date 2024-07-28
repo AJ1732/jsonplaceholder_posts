@@ -22,7 +22,7 @@ const ErrorPage = ({ message }: { message: string }) => {
           Something went wrong, <br />
           {message} <br /> <br />
         </p>
-        <Link href="/">
+        <Link href="/" className="size-full">
           <Button className="py-6 text-lg" onClick={() => router.push(`/`)}>
             Go Home
           </Button>
