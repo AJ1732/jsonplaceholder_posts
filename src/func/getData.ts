@@ -10,7 +10,12 @@ export const getPosts = async (
   limit: number,
 ): Promise<PostsProps[]> => {
   const urlParams = `https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=${limit}`;
-  const postResponse = await fetch(urlParams, { cache: "no-store"  });
+  const postResponse = await fetch(urlParams, {
+    method: "GET",
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+    },
+  });
 
   if (!postResponse.ok) {
     throw new Error("failed to fetch");
@@ -21,7 +26,10 @@ export const getPosts = async (
 
 export const getSinglePost = async (id: number): Promise<PostsProps> => {
   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
-    // cache: "no-store",
+    method: "GET",
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+    },
   });
 
   if (!res.ok) {
@@ -39,7 +47,10 @@ interface SingleUserProps {
 
 export const getSingleUser = async (id: number): Promise<SingleUserProps> => {
   const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`, {
-    // cache: "no-store",
+    method: "GET",
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+    },
   });
 
   if (!res.ok) {
