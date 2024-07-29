@@ -11,10 +11,10 @@ export const getPosts = async (
 ): Promise<PostsProps[]> => {
   const urlParams = `https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=${limit}`;
   const postResponse = await fetch(urlParams, {
-    method: "GET",
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-    },
+    // method: "GET",
+    // headers: {
+    //   "Access-Control-Allow-Origin": "*",
+    // },
   });
 
   if (!postResponse.ok) {

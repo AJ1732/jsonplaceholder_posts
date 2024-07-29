@@ -24,7 +24,6 @@ interface Props {
 }
 
 export default async function TableDemo({ page, limit }: Props) {
-  await new Promise((resolve) => setTimeout(resolve, 10000));
   const posts: Post[] = await getPosts(Number(page), Number(limit));
 
   return (
