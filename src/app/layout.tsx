@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: "Posts | JSONPlaceholder",
     url: "https://1732-jsonplaceholder-posts.vercel.app/",
     description: "Website displaying posts from a free and reliable fake API",
-    images: "https://aj1732.github.io/hng-11/stage_two/public/img/logo.png",
+    images: "https://aj1732.github.io/jsonplaceholder_posts/public/favicon_io/android-chrome-192x192.png",
   },
   icons: {
     icon: ["/favicon_io/favicon.ico?v=4"],
