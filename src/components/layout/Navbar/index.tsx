@@ -54,12 +54,12 @@ const Navbar = () => {
 
           {/* MOBILE NAV */}
           <nav className="z-10 mt-10 h-fit rounded-md bg-neutral-300 px-4 py-8">
-            <ul className="flex flex-col items-start justify-between text-right *:px-6 *:py-3">
+            <ul className="flex flex-col items-center justify-between text-right *:px-6 *:py-3">
               {navlinks.map(({ title, link }) => (
                 <li
                   key={title}
                   onClick={() => setOpenNav((prev) => !prev)}
-                  className="text-xl font-light text-black"
+                  className="text-lg font-light text-black"
                 >
                   <Link href={link} className="block">
                     {title}
