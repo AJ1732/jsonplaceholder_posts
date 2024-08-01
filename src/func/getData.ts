@@ -59,3 +59,28 @@ export const getSingleUser = async (id: number): Promise<SingleUserProps> => {
 
   return await res.json();
 };
+
+// https://jsonplaceholder.typicode.com/posts/1/comments
+
+interface PostComments {
+  postId: number
+  id: number;
+  name: string;
+  email: string;
+  body: string;
+}
+
+export const getPostComments = async (id: number): Promise<PostComments[]> => {
+  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}/comments`, {
+    method: "GET",
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+    },
+  });
+
+  if (!res.ok) {
+    throw new Error("failed to fetch");
+  }
+
+  return await res.json();
+};
