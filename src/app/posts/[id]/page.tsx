@@ -1,4 +1,4 @@
-import { Card } from "@/components";
+import { Card, TextLine } from "@/components";
 import { PostBg, QuoteIcon } from "@/components/svgs";
 import { getPostComments, getSinglePost, getSingleUser } from "@/func/getData";
 import { Contrail_One } from "next/font/google";
@@ -41,7 +41,7 @@ const SinglePost = async ({ params }: Props) => {
         <hr className="text-primary" />
 
         <div className="w-full max-w-5xl space-y-6 p-12 text-left lg:p-24">
-          <h3>Comments</h3>
+          <TextLine text="comments" className="text-lg lg:text-xl" />
 
           <div className="w-full space-y-6">
             {comments.map(({ id, email, body }) => (
