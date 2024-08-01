@@ -23,12 +23,17 @@ export default function PaginationDemo({ cPage, cLimit }: Props) {
   const limit = searchParams.get("limit") ?? cLimit;
 
   const pages = useArrayGen(3);
+  const totalPosts = 100
+
+  const start = (Number(page) - 1) * Number(limit);
+  const end = start + Number(limit);
 
   return (
     <Pagination>
       <PaginationContent>
         <PaginationItem>
           <PaginationPrevious
+            className={`disabled:*:text-primary/50 ${start <= 0 && "pointer-events-none opacity-50"}`}
             href={`${pathname}?page=${Number(page) - 1}&limit=${limit}#posts`}
           />
         </PaginationItem>
@@ -50,6 +55,7 @@ export default function PaginationDemo({ cPage, cLimit }: Props) {
 
         <PaginationItem>
           <PaginationNext
+            className={`disabled:*:text-primary/50 ${end >= totalPosts && "pointer-events-none opacity-50"}`}
             href={`${pathname}?page=${Number(page) + 1}&limit=${limit}#posts`}
           />
         </PaginationItem>
