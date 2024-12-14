@@ -2,7 +2,7 @@ import { twMerge } from "tailwind-merge";
 
 const Masonary = ({ className }: { className?: string }) => {
   return (
-    <div className="max-h-[40rem] overflow-hidden">
+    <div className="overflow-hidden max-md:max-h-[40rem] sm:-mt-20 lg:-mt-40">
       <div
         className={twMerge(
           "mt-2 flex max-h-[48rem] justify-center overflow-hidden",

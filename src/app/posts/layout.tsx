@@ -16,7 +16,9 @@ export default function PostsLayout({
   return (
     <div className="mt-8">
       <BackIcon />
-      <div>{children}</div>
+      <div className="flex min-h-[calc(100dvh-10rem)] w-full flex-col items-start justify-center">
+        {children}
+      </div>
     </div>
   );
 }
